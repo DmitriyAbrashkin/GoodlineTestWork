@@ -10,7 +10,6 @@ switch ($_GET['task']) {
         break;
     case '2':
         sortNumber();
-        echo 'Успешно';
         htmlForReturnBack();
         break;
     case '3':

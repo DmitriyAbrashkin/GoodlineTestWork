@@ -18,6 +18,10 @@ function createFileWithRandomNumbers()
 
 function sortNumber()
 {
+    if (!file_exists(PATH_TO_FILE)) {
+        echo 'Файла нет';
+        return;
+    }
     $numbers = file_get_contents(PATH_TO_FILE);
     $numbersArr = explode(',', $numbers);
     asort($numbersArr);
@@ -29,6 +33,10 @@ function sortNumber()
 
 function erectInPower($number, $power)
 {
+    if ($power == 0) {
+        echo '1';
+        return;
+    }
     $temp = $number;
     for ($i = 1; $i < $power; $i++)
         $number *= $temp;

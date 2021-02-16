@@ -23,8 +23,8 @@
 
     <label for="formForTask3">Третье задание</label>
     <form id="formForTask3" action="controller.php" method="get">
-        <input type="number" placeholder="Число" name="number">
-        <input type="number" placeholder="Степень" name="power">
+        <input type="number" min="1" max="10" placeholder="Число" name="number">
+        <input type="number" min="0" max="9" placeholder="Степень" name="power">
         <button type="submit">Возвести в степень число</button>
         <input type="hidden" value="3" name="task">
     </form>
